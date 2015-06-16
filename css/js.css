@@ -1,0 +1,229 @@
+/* CSS Document */
+/*The text is defined as aligned 'center' in order to center the website in the middle of the browser.
+This value is set back in the #global which contain all the html code in your page*/
+body{
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align: center;
+	margin:0;
+	padding:0;
+	line-height: 1.4em;
+	background-color:#EFEFEF;
+	color:#001C37;
+}
+
+/*border defined as 0 in order to prevent border around a picture which is a link*/
+img{
+	border:0;
+}
+
+/*delete pre-defined value in some browsers*/
+form{
+	margin:0;
+}
+
+/*allows to center the site in the middle of the html page with margin right and left set as 'auto'*/
+div#global{
+	position: relative;
+	margin-left: auto;
+        margin-right: auto;
+	margin-top:20px;
+	text-align: left;
+	width:800px;
+}
+
+
+/*header containing the logo and banner*/
+#header{
+	width:100%;
+	background-color:#890000;
+	height:109px;
+}
+
+#header a{
+     text-decoration:none;
+}
+
+#header a:hover{
+    text-decoration:none;
+}
+
+/* Page title */
+div#title{
+
+   position: relative;
+   width:100%;
+   margin-top:50px;
+   line-height: 220%;
+}
+
+img.crest { 
+    float: left; 
+    margin: 0px; 
+}
+
+img.floatLeft{
+   float:left;
+   margin:15px 10px;
+}
+
+img.floatRight{
+   float:right;
+   margin:15px 10px;
+}
+
+#logo
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: xx-large;
+	color: black;
+	text-align: center;
+	text-indent: 20px;
+	padding: 60px 80px;
+}
+
+#whitetext {
+  color: white;
+  font-size: x-large;
+}
+
+#main_menu{
+	float:left;
+	background:#333333;
+	width:800px;
+}
+
+#main_menu ul{
+	float:left;
+	padding:4px; 
+	margin:0;
+}
+
+#main_menu li{
+	display:inline;
+	list-style-type:none;
+}
+
+#main_menu a{
+	color:#dddddd;
+	font-weight:bold;
+	text-decoration:none;
+	padding:0px 4px 0px 4px;
+}
+
+#main_menu a:hover, #main_menu a.active{
+	color:#fff;
+}
+
+#content{
+  	width:800px;
+        /*	padding:20px 10px 20px 10px; */
+        padding-top: 50px;
+        padding-bottom: 50px;
+	font-size: 100%;
+	color:#333;
+	voice-family: "\"}\"";
+  	voice-family:inherit;
+
+}
+
+html>body div#content{
+	width:800px;
+}
+
+#content h2{
+   color:#890000;
+}
+
+#content a{
+   color:#890000;
+}
+
+#content a:hover{
+    color:#893333;
+ }
+ 
+#content ul{
+   list-style: square inside;
+}
+ 
+
+div#footer{
+	font-size:90%;
+	line-height:1.3em;
+	float:left;
+	background-color:#DBDBDB;
+	/* padding:5px 4px 5px 4px;*/
+	width:800px;
+	voice-family: "\"}\"";
+  	voice-family:inherit;
+}
+
+div#footer a{
+   color:#555;
+    text-decoration:none;
+ }
+
+html>body div#footer{
+	width:800px;
+}
+
+.textbox{
+   color: #333333;
+   margin: 20px 30px;
+}
+
+.light{
+   color:#444;
+}
+
+#breadcrumb {
+   padding: 4px;
+   margin:20px 0px 0px 0px;
+   }
+   
+#breadcrumb h3 {
+  display: none;
+}
+
+#breadcrumb ul {
+   display: inline;
+   padding-left: 0;
+   margin-left: 0;
+}
+
+#breadcrumb ul li {
+  display: inline;
+}
+
+#breadcrumb ul li a:link {
+   padding: .2em;
+}
+
+#breadcrumb ul ul li {
+   background-image: url(../images/arrow.gif);
+   background-repeat: no-repeat;
+   background-position: left;
+   padding-left: 12px;
+}
+
+.halfbox{
+   float: left;
+   width:280px;;
+   padding: 5px 10px;
+}
+
+dt {
+    font-weight:bold;
+}
+
+/* Tiles for displaying video search results */
+
+#tile{
+  width:400px;
+  height:300px;
+  background:#fff;
+  float:left;
+  margin:5px;
+  border:2px;
+}
