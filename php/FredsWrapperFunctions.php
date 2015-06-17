@@ -16,31 +16,29 @@ function head($top,$runninghead)
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en_GB">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
-    <link rel="stylesheet" type="text/css" href="./css/js.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $top ?>/css/js.css" />
     <title></title>
     <meta name="author" content="Fred Cummins" />
-    <meta name="description" content="Cognitive Science at UCD" />
-    <meta name="keywords" content="Cognitive Science, Dublin, Ireland" />
+    <meta name="description" content="Whiteboards" />
+    <meta name="keywords" content="Drivel and musings" />
     <script src="jquery-2.1.3.js"></script>
 </head>
 <body>
 <div id="global">
 <div id="header">
 
-<img class="crest" height="109" alt="UCD Home" src="./images/ucd_crest_red.gif" width="89" />
+<img class="crest" height="109" alt="Boo" src="<?php echo $top ?>/images/fred.gif" width="89" />
 
 <p id="logo">
-<span id="whitetext">Joint Speech Archive</span></p> 
+<span id="whitetext">Whiteboard project</span></p> 
 
 </div>  <!-- header -->
 
 <div id="main_menu">
 
     <ul>
-        <li><a href="index.php" title="Joint Speech Archive Home">[Home]</a>&nbsp;</li>
-        <li><a href="add.php"  title="Add a video" >[Add Video]</a>&nbsp;</li>
-        <li><a href="search.php"  title="Search" >[Search]</a>&nbsp;</li>
-        <li><a href="http://cspeech.ucd.ie/JointSpeechExamples">[Examples]</a></li>
+        <li><a href="../index.php" title="Whiteboard home">[Home]</a>&nbsp;</li>
+        <li><a href="scripts/showAddBoard.php"  title="Add a board" >[Add Board]</a>&nbsp;</li>
 
     </ul>
 </div>

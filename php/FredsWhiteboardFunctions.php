@@ -1,6 +1,6 @@
 <?php
-include_once("php/wrapperfuncs.php");
-include_once("php/FredsFreetag2.php");
+include_once("FredsWrapperFunctions.php");
+include_once("FredsFreetag2.php");
 
 /* functions defined by me
  *
@@ -182,7 +182,7 @@ function displayVideo($ix, $videoData)
 <?php
     }
 
-function tagarray_to_string($tagarr)
+function tagarrayToString($tagarr)
 {
     $string = "";
     foreach ($tagarr as $tag) {
