@@ -7,12 +7,12 @@ include_once("php/FredsFreetag2.php");
  */
 
 /* displayTiles
- * generate a page with multiple video tiles
+ * generate a page with multiple boards
  */
 
 function displayTiles($result, $msg = NULL)
 {
-    head(".","Joint Speech Archive");
+    head(".","Whiteboards");
 ?>
     <H2> Search Results </H2>
     
@@ -25,10 +25,10 @@ if($msg)
 }
 
 if($result) {
-?> <form action="getvideo.php"  method="post"> <?php
+?> <form action="getboard.php"  method="post"> <?php
           while($row = $result->fetch_array())
           {
-              displayOneTile($row['ix'], $row['title'], $row['description'], $row['url']);
+              displayOneTile($row['ix'], $row['mytext'], $row['date'], $row['boardurl']);
           }
 ?> </form> <?php
               
@@ -38,9 +38,9 @@ footer();
 
 }
 
-function displayOneTile($ix, $title, $descr, $url)
+function displayOneTile($ix, $mytext, $date, $boardurl)
 {
-    $id = getYouTubeCode($url);
+    $id = getFlickrCode($boardurl);
 ?>
     <div id="tile">
         <table cellpadding="5" width="100%">
@@ -89,8 +89,9 @@ function displayVideo($ix, $videoData)
     endcontent();
     footer();
     }
-    
-    function getYouTubeCode($inurl)
+
+    /* Flickr gives me HTML code that I need to eviscerate to get the image URL */
+    function getFlickrCode($inhtml)
     {
         preg_match(
             '/[\\?\\&]v=([^\\?\\&]+)/',
@@ -109,49 +110,16 @@ function displayVideo($ix, $videoData)
     function displayBlankEntry()
     {
     ?>
-     <form action="addvideo.php" method="post">
+     <form action="addboard.php" method="post">
         <table>
             <tr><td width="80" >
-                Video Title:</td><td colspan="5">
-                <input type="text" name="title" size="90" value=""></td></tr>
-                <tr>
-                    <td >URL: </td><td colspan="5"><input type="text" name="url" size="90"></td></tr>
-                <tr><td>Domain:</td><td> <select name="domain">
-                    <option value="protest" selected> Protest </option>
-                    <option value="prayer"  >Prayer</option>
-                    <option value="sports"  >Sports</option>
-                    <option value="secular"  >Secular</option>
-                    <option value="education" >Education</option>
-                    <option value="performance" >Performance</option>
-                    <option value="misc" >Miscellaneous</option>
-            </select></td>
-            <td>Structure:</td><td> <select name="structure" >
-                <option value="none" selected >No value</option>
-                <option value="call and response" >Call and response</option>
-                <option value="mirroring" >Mirroring</option>
-                <option value="chorusing" >Chorusing</option>
-                <option value="assent" >Assent/Amen</option>
-                <option value="complex" >Complex</option>
-
-            </select></td>
-            <td>Movement:</td><td> <select name="movement" >
-                <option value="none" selected >None</option>
-                <option value="fist pump" >Fist pumping</option>
-                <option value="clapping" >Clapping</option>
-                <option value="noteworthy" >Noteworthy</option>
-                <option value="ritualised" >Ritualised</option>
-            </select></td></tr>
-            <tr><td>Prosody:</td><td> <select name="prosody" >
-                <option value="spoken" selected >Spoken</option>
-                <option value="sung"  >Sung</option>
-            </select></td>
-            <td>&nbsp;</td>                    <td>&nbsp;</td>
-            <td>&nbsp;</td>                    <td>&nbsp;</td></tr>
-            
-            <tr><td>Description:</td><td colspan="5">
-                <textarea name="description" rows="10"  cols="90">Enter description here </textarea></td></tr>
+                URL:</td><td colspan="5">
+                <input type="text" name="url" size="90" value=""></td></tr>
+            <tr><td>Date:</td><td><input type="date" name="date" colspan="5"></td></tr>
+            <tr><td>Text:</td><td colspan="5">
+                <textarea name="mytext" rows="10"  cols="90">Enter transcription here </textarea></td></tr>
             <tr><td>Tags:</td><td colspan="5"> <input type="text" name="tags" size="90" value="" ></td></tr>
-            <tr><td colspan="6" align="center" ><input type="submit" value="Add Video"></td></tr></table>
+            <tr><td colspan="6" align="center" ><input type="submit" value="Add Board"></td></tr></table>
     </form>
 
         <?php

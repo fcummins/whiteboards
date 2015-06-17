@@ -33,11 +33,11 @@ class freetag {
   var $_db_user = 'root';
   var $_db_pass = 'mycroft03';
   var $_db_host = 'localhost';
-  var $_db_name = 'JS2'; 
+  var $_db_name = 'Whiteboards'; 
   /**#@-*/
   /**
    * @access private
-   * @var ADOConnection The ADODB Database connection instance.
+   * @var ADOConnection The ADODB Database connection instance.g
    */
   var $_db;
   /**
