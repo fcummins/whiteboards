@@ -16,12 +16,11 @@ function head($top,$runninghead)
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en_GB">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
-    <link rel="stylesheet" type="text/css" href="<?php echo $top ?>/css/js.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $top ?>/css/whiteboards.css" />
     <title></title>
     <meta name="author" content="Fred Cummins" />
     <meta name="description" content="Whiteboards" />
     <meta name="keywords" content="Drivel and musings" />
-    <script src="jquery-2.1.3.js"></script>
 </head>
 <body>
 <div id="global">
@@ -37,8 +36,8 @@ function head($top,$runninghead)
 <div id="main_menu">
 
     <ul>
-        <li><a href="../index.php" title="Whiteboard home">[Home]</a>&nbsp;</li>
-        <li><a href="scripts/showAddBoard.php"  title="Add a board" >[Add Board]</a>&nbsp;</li>
+        <li><a href="./index.php" title="Whiteboard home">[Home]</a>&nbsp;</li>
+        <li><a href="scripts/enterBoardUrl.php"  title="Add a board" >[Add Board]</a>&nbsp;</li>
 
     </ul>
 </div>
@@ -52,12 +51,6 @@ function endcontent()
 {
 ?>
 </div> <!-- end of content -->
-<?php
-}
-
-function footer()
-{
-?>
 <div id="footer">
 	 
 <p>Copyright by UCD School Of Computer Science and Informatics. 
