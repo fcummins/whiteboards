@@ -19,7 +19,7 @@ $flickrurl = $a->item(0)->getAttribute('href');
 <form action="enterBoardToDb.php" method="post">
     <input type="hidden" name="jpgurl" value="<?php echo $jpg ; ?>">
     <input type="hidden" name="flickrurl" value="<?php echo $flickrurl ; ?>">
-    <input type="hidden" name="thedate" value="<?php echo $thedate ; ?>">
+    <input type="hidden" name="thedate" value="<?php echo $_POST['thedate'] ; ?>">
     
     <table>
         <tr><td colspan="2">

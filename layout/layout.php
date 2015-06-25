@@ -36,8 +36,8 @@ function head($top,$runninghead)
 <div id="main_menu">
 
     <ul>
-        <li><a href="./index.php" title="Whiteboard home">[Home]</a>&nbsp;</li>
-        <li><a href="scripts/enterBoardUrl.php"  title="Add a board" >[Add Board]</a>&nbsp;</li>
+        <li><a href="<?php echo $top; ?>/index.php" title="Whiteboard home">[Home]</a>&nbsp;</li>
+        <li><a href="<?php echo $top; ?>/scripts/enterBoardUrl.php"  title="Add a board" >[Add Board]</a>&nbsp;</li>
 
     </ul>
 </div>

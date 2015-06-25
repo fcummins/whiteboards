@@ -30,10 +30,10 @@ class freetag {
    *  @access private
    *  @var string DB Connection parameters
    */ 
-  var $_db_user = 'root';
-  var $_db_pass = 'mycroft03';
-  var $_db_host = 'localhost';
-  var $_db_name = 'Whiteboards'; 
+  var $_db_user = '';
+  var $_db_pass = '';
+  var $_db_host = '';
+  var $_db_name = ''; 
   /**#@-*/
   /**
    * @access private

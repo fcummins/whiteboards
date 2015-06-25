@@ -2,8 +2,7 @@
 include_once("../resources/config.php");
 include_once("../resources/FreetagCode.php");
 include_once("../layout/showBoards.php");
-
-// Set up the mysqli connection
+include_once("../layout/layout.php");
 
 $connection=mysqli_connect($config['db']['host'],
                            $config['db']['username'],
@@ -16,29 +15,19 @@ if (mysqli_connect_errno())
 }
 
 $thetranscription = htmlspecialchars($_POST['transcription'], ENT_QUOTES);
+$ix = $_POST['ix'];
 
-$jpgurl = $connection->real_escape_string($_POST['jpgurl']);
-$flickrurl = $connection->real_escape_string($_POST['flickrurl']);
-$transcription =  $connection->real_escape_string($thetranscription);
-$date = $connection->real_escape_string($_POST['thedate']);
-
-$sql=  "INSERT INTO whiteboards (jpgurl, flickrurl, transcription, date) 
-            VALUES ('$jpgurl ', '$flickrurl', 
-            '$transcription', '$date')";
+$sql = "UPDATE whiteboards
+        SET transcription='$thetranscription'
+        WHERE ix='$ix';";
 
 if (!mysqli_query($connection,$sql))
 {
     die('Error: ' . mysqli_error($connection));
 }
 
-
-$sql = "SELECT LAST_INSERT_ID()";
-$res = mysqli_query($connection,$sql);
-$ix = mysqli_insert_id($connection);
-
-// I hate to do this, but I'm not about to unwrap all the freetag code,
-// So we simply close this connection and open another
 mysqli_close($connection);
+
 
 $options = array(
     'db_user' =>  $config['db']['username'],
@@ -56,21 +45,15 @@ if(isset($_POST['tags']) && trim($_POST['tags']) != "") {
     $tagarr = NULL;
 }
 
-// All done.  Now exit and present some kind of screen
+head("..", "Whiteboard fun");
+    ?>
+<h1>DONE!  NOW WHAT?</h1>
 
-$boardData = array(
-    "ix" => $ix,
-    "jpgurl" => $jpgurl,
-    "flickrurl" => $flickrurl,
-    "date" => $date,
-    "tagarr" => $tagarr,
-    "transcription" => $transcription
-);
+<p>Tags are: <?php echo $_POST['tags']; ?> </p>
 
+<?php
 
-
-displayEditableBoard($boardData);
+endcontent();
 
 ?>
 
-<p>This is some text </p>

@@ -1,0 +1,13 @@
+
+
+
+$boardData = array(
+    "ix" => $ix,
+    "jpgurl" => $jpgurl,
+    "flickrurl" => $flickrurl,
+    "date" => $date,
+    "tagarr" => $tagarr
+    "transcription" => $transcription
+);
+
+//displayEditableBoard($boardData);
