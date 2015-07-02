@@ -29,8 +29,14 @@ function displayEditableBoard($boardData)
     <?php  
     endcontent();
     
-}
+    }
 
+    function displayOneBoard($boardData)
+    {
+
+        
+    }
+    
 function tagarray_to_string($tagarr)
 {
     $string = "";

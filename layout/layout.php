@@ -47,22 +47,46 @@ function head($top,$runninghead)
 <?php
 }
 
+function newHead($top, $runningHead)
+{
+   echo '<?xml version="1.0" encoding="iso-8859-15"?>' ;
+?>
+    
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_GB">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
+
+    <link rel="stylesheet" type="text/css" href="<?php echo $top ?>/css/whiteboards.css" />
+    <title></title>
+    <meta name="author" content="Fred Cummins" />
+    <meta name="description" content="Whiteboards" />
+    <meta name="keywords" content="Drivel and musings" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+   <?php
+
+}
+
+
 function endcontent()
 {
 ?>
 </div> <!-- end of content -->
 <div id="footer">
 	 
-<p>Copyright by UCD School Of Computer Science and Informatics. 
+<p>&copy; UCD School Of Computer Science. 
 Contact: <a href="mailto:fred.cummins@ucd.ie" 
 title="Contact">fred.cummins@ucd.ie</a></p>
 
-
+<!--
 <p class="light">Disclaimer: the information contained in these web pages 
 is, to the best of our knowledge, true and accurate at the time of publication, 
 and is solely for informational purposes. University College Dublin accepts no 
 liability for any loss or damage howsoever airising and a result of use or reliance 
 on this information.</p>
+                    -->
 </div>  <!-- footer -->
 </div>  <!-- global -->
 

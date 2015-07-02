@@ -3,14 +3,13 @@ include_once("layout/layout.php");
 include_once("resources/config.php");
 ?>
 
-<?php head(".","Whiteboard Project"); ?>
+<?php newHead(".","Whiteboard Project"); ?>
 
+<img src="images/fred.gif" width="60px" >
 
-    <p> Whiteboards in a Database.  Oh Brave New World that hath such creatures in it!</p>
-
-    <ul>
-        <li><a href="scripts/enterBoardUrl.php" >Enter a whiteboard</a></li>
-    </ul>
+<form>
+    <input type="button" value="Add" name="addbutton" onClick="scripts/enterBoardUrl.php" >
+</form>
 
 <?php endcontent(); ?>
 
